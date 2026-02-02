@@ -95,7 +95,7 @@ nav .nav_logo{
 
 .video-container iframe {
   position: absolute;
-  top: -50px;
+  top: -5%;
   left: -12%;
   width: 124%;
   height: 98%;
@@ -148,40 +148,6 @@ h2{
     text-align: center;
     margin-bottom: 55px;
 }
-
-/*.team-member{
-    display: flex;
-    max-width: 900px;
-    min-width: 600px;
-    margin: 80px auto;
-    gap: 25px;
-    padding-bottom: 80px;
-    border-bottom: 2px solid #929090;
-}
-.team-member img{
-    width: 200px;
-    border: 2px #e30073 solid;
-    border-radius: 7px;
-}
-.team-member:nth-child(3) img{
-    border: 2px #3ECEC5 solid;
-}
-.member-info{
-    width: 650px;
-    gap: 25px;
-    text-align: left;
-    padding: 10px;
-}
-.member-info h3{
-    color: #fff;
-    font-size: 28px;
-    display: inline-block;
-    margin-bottom: 25px;
-}
-.member-info p{
-    color: #fff;
-    
-}*/
 #service-holder{
     max-width: 800px;
     margin: 0 auto;
