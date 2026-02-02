@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Penultima Films</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="nav-content">
+                <div class="nav_logo"><img src="img/logo.png" alt="La Penultima Films"></div>
+                <ul class="nav_links">
+                    <li class="link"><a href="#">Productora</a></li>
+                    <li class="link"><a href="#">Servicios</a></li>
+                    <li class="link"><a href="#">Portfolio</a></li>
+                    <li class="link"><a href="#">Contacto</a></li>
+                </ul>
+                <div class="sn-logo">
+                    <img src="img/instagram.png">
+                    <img src="img/linkedin.png">
+                </div>
+            </div>
+        </nav>
+        <div class="video-container">
+            <iframe id="top-video" src="https://www.youtube.com/embed/jwWuqNvgUWk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&playlist=jwWuqNvgUWk&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </header>
+    <main>
+        <section id="title">
+            <h1>Elevamos tus Proyectos con Producción Profesional</h1>
+            <p>
+                Somos una productora audiovisual integral dedicada a convertir historias inspiradoras en imágenes potentes. 
+                Con base en Montevideo y operando a nivel global, nos especializamos en contenido de alta calidad para cine, documentales, videos corporativos y publicidad que conecta con la audiencia.
+            </p>
+        </section>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div id="service-holder">
+                <div class="service">
+                    <img src="img/docs.jpg" alt="Servicio Documental">
+                    <p>Historias reales que impactan.</p>
+                    <p>Desarrollamos documentales con una narrativa profunda y una estética cinematográfica que inspira, informa y emociona.</p>
+                </div>
+                <div class="service">
+                    <img src="img/podcast.jpg" alt="Servicio Podcast">
+                    <p>Dale voz a tus ideas.</p>
+                    <p>Producimos podcasts con calidad profesional, cuidando cada detalle de sonido, guion y edición para que tu mensaje conecte y destaque.</p>
+                </div>
+                <div class="service">
+                    <img src="img/streaming.jpg" alt="Servicio Streaming">
+                    <p>Transmitimos tu evento al mundo.</p>
+                    <p>Ofrecemos streaming profesional con la mejor tecnología, realizando emisiones estables, dinámicas y de alta calidad para cualquier audiencia.</p>
+                </div>
+                <div class="service">
+                    <img src="img/docs.jpg" alt="Servicio Storytelling">
+                    <p>Tu historia, contada como merece.</p>
+                    <p>Creamos relatos poderosos que dan vida a tu marca o proyecto, combinando estrategia, creatividad y emoción en cada pieza.</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Dcumentales</h2>
+            
+
+            <div class="swiper swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1"><img src="img/thomas_kuhn.jpg" alt="Thomas Kuhn"></div>
+                    <div class="swiper-slide slide1"><img src="img/timi_ju.jpg" alt="Timi Ju"></div>
+                    <div class="swiper-slide slide1"><img src="img/vivir_al_sur.jpg" alt="Vivir al Sur"></div>
+                    <div class="swiper-slide slide1"><img src="img/fragmento_de_historia.jpg" alt="Fragmento de Historia"></div>
+                </div>
+
+                <div class="swiper-pagination pag1"></div>
+                <div class="swiper-button-prev prev1"></div>
+                <div class="swiper-button-next next1"></div>
+            </div>
+            <h2>Otros Destacados</h2>
+            <div class="swiper swiper2">
+                <div class="swiper-wrapper swipe2"></div>
+                <div class="swiper-pagination pag2"></div>
+                <div class="swiper-button-prev prev2"></div>
+                <div class="swiper-button-next next2"></div>
+            </div>
+            <!-- <div class="swiper swiper2">
+            
+                <div class="swiper-slide slide2"><img src="img/thomas_kuhn.jpg" alt="Thomas Kuhn"></div>
+                <div class="swiper-slide slide2"><img src="img/timi_ju.jpg" alt="Timi Ju"></div>
+                <div class="swiper-slide slide2"><img src="img/vivir_al_sur.jpg" alt="Vivir al Sur"></div>
+                <div class="swiper-slide slide2"><img src="img/fragmento_de_historia.jpg" alt="Fragmento de Historia"></div>
+            </div>
+
+            <div class="swiper-pagination pag2"></div>
+            <div class="swiper-button-prev prev2"></div>
+            <div class="swiper-button-next next2"></div>
+            </div>
+            -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                fetch('img/images.json')  // Load the image list from the JSON file
+                    .then(response => response.json())
+                    .then(data => {
+                    const swiperWrapper = document.querySelector('.swipe2');
+                    data.images.forEach(image => {
+                        const slide = document.createElement('div');
+                        slide.classList.add('swiper-slide');
+                        slide.classList.add('slide2');
+                        const img = document.createElement('img');
+                        img.src = `img/posters/${image}`;  // Path to your images folder
+                        slide.appendChild(img);
+                        swiperWrapper.appendChild(slide);
+                });
+                new Swiper('.swiper1', {
+                loop: true,
+                autoplay: false,
+                  breakpoints: {
+                // mobile
+                320: {
+                slidesPerView: 1
+                },
+
+                // tablet
+                640: {
+                slidesPerView: 2
+                },
+
+                // desktop
+                1024: {
+                slidesPerView: 3
+                }
+            },
+                pagination: { el: '.pag1' },
+                navigation: {
+                nextEl: '.next1',
+                prevEl: '.prev1'
+                }
+            });
+                new Swiper('.swiper2', {
+                    loop: true,
+                    autoplay: false,
+                    breakpoints: {
+                    // mobile
+                    320: {
+                    slidesPerView: 1
+                    },
+
+                    // tablet
+                    640: {
+                    slidesPerView: 2
+                    },
+
+                    // desktop
+                    1024: {
+                    slidesPerView: 3
+                    }
+                },
+                    pagination: { el: '.pag2' },
+                    navigation: {
+                    nextEl: '.next2',
+                    prevEl: '.prev2'
+                    }
+                });
+                })
+                .catch(error => console.error('Error loading images:', error));
+            });
+            </script>
+            
+        </section>
+    </main>
+</body>
+</html>
