@@ -201,12 +201,12 @@ h2{
 .semi-title{
     color: #b69239 !important;
     opacity: 90%;
+    font-size: 18px !important;
+    margin: 10px 0 5px;
 }
-.service p:nth-child(2){
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
+.service span{
+    font-style: italic;
+    font-weight: 600;
 }
 .swiper{
     max-width: 900px;
