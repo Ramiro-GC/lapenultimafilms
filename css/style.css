@@ -95,11 +95,12 @@ nav .nav_logo{
 
 .video-container iframe {
   position: absolute;
-  top: -5%;
+  top: 5%;
   left: -12%;
   width: 124%;
   height: 98%;
   z-index: -1;
+  pointer-events: none;
 }
 section{
     margin-top: 0;
