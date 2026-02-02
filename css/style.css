@@ -6,6 +6,8 @@
 }
 :root{
     --white: #f3f4f6;
+    --font-color1: #362102;
+    --font-color2: #2e2b2b;
 }
 *{
     padding: 0;
@@ -66,7 +68,7 @@ nav .nav_logo{
 .nav-links{
     width: 100%;
     list-style-type: none;
-    color: #000;
+    color: var(--font-color1);
     text-align: right;
     display: inline-block;
 }
@@ -112,8 +114,8 @@ section{
 }
 #title h1{
     font-family: "Spartan",sans-serif;
-    font-size: 36px;
-    color: #36393b;
+    font-size: 30px;
+    color: var(--font-color1);
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -122,7 +124,7 @@ section{
     font-weight: 400;
     max-width: 900px;
     margin-bottom: 35px;
-    color: #2e2b2b;
+    color: var(--font-color2);
     font-size: 17px;
     line-height: 1.5;
 }
@@ -137,7 +139,7 @@ section{
 }
 h2{
     font-size: 30px;
-    color: #332602;
+    color: var(--font-color1);
     display: block;
     text-align: center;
     margin-bottom: 55px;
@@ -191,8 +193,8 @@ h2{
 }
 .service p{
     font-size: 14px;
-    font-weight: 500;
-    color: #2e2b2b;
+    font-weight: 400;
+    color: var(--font-color2);
     line-height: 1.5em;
     text-align: justify;
 }
